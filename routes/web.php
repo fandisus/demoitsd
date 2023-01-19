@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 // Route::post('/login', LoginController::class, 'login');
 
-// Route::controller(LoginController::class)->group(function() {
-//     Route::get('/login', function() { return 'hahaha'; });
-//     Route::post('/login', 'login');
-// });
+Route::controller(LoginController::class)->group(function() {
+    Route::get('/login', function() { return 'hahaha'; });
+    Route::post('/login', 'login');
+});
